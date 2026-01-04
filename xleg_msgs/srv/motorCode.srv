@@ -1,0 +1,18 @@
+# The units of angle and speed are all 0-4096
+# angleR :unit is du. 0~360
+# playtime: unit is ms. 
+# positionR: 0-4096,   1 positionR= 0.088du
+# speedR: du/s
+
+int32 drive_alllegs
+
+int32[3] servoID
+float32[3] angleR 
+# int32[3] positionR
+float32[3] speedR
+uint16[3] playtime
+
+
+---
+int32 error_codes
+

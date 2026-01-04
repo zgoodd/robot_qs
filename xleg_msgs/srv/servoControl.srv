@@ -1,0 +1,17 @@
+int32 servoID
+bool allServos
+
+bool servoCmd
+
+int32 TORQUE_ON = 1
+int32 TORQUE_OFF = 0
+int32 CLEAR_ERROR = 2 
+
+int32 STOP_ROBOT = 3
+
+
+
+#duration timeout
+---
+
+int32 error_codes

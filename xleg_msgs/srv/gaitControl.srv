@@ -1,0 +1,71 @@
+# Initial position and posture
+#
+float32 x
+float32 y
+float32 z
+
+float32 Wx
+float32 Wy
+float32 Wz 
+
+int32 footholdDistanceX
+int32 footholdDistanceY
+
+# Gait parameters
+#
+int32 gaitType
+int32 locomotionMode
+int32 stepHeight
+int32 stepDistance
+float32 k   # 稳定裕度
+float32 T   # 运动周期
+
+bool climbMode
+
+# For translation_auto
+float32 directionX 
+float32 directionY
+float32 directionZ   # 旋转角度
+
+float32 move_direction   #0往前 90往左， -90往右，180往后
+float32 body_direction   #机身转下，面对前进方向
+
+
+
+# For trot
+float32 stepO
+float32 b
+
+
+int32 GAIT_TRANS= 1
+int32 GAIT_TRANS_FAST = 2
+int32 GAIT_TROT = 3
+int32 GAIT_TROT_FAST = 4
+
+int32 MOVEONCE = 0
+int32 MOVE = 1
+int32 STOP =2
+
+#string filename
+
+#duration timeout
+
+
+
+# For show
+int32 showMOVE           #演示模式 showMOVE=0 stop， =1 按序列运行； =3 一直前进;         =2 gait线程（非运动演示）
+bool isNoGravity     # 是否是低重力环境模拟测试   是 true
+bool bizhangMode   # 是否打开避障演示，视觉   1 打开，0 不大开
+
+int32[8] showCode
+int32[8] showValue
+
+int32 bodyadjustX   # 每次抬腿移动重心
+int32 bodyadjustY
+
+
+---
+
+int32 error_codes
+
+

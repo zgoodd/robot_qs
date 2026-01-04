@@ -1,0 +1,19 @@
+<!--
+  红外传感器节点启动文件 - RK3588 GPIO版本
+  功能：启动红外模块控制节点，直接通过GPIO控制IO并读取红外传感器数据
+-->
+
+<launch>
+    <!-- 红外传感器节点 -->
+    <node pkg="xleg_lowersys" type="pub_ir_sensor" name="ir_sensor_gpio_node" output="screen">
+        <!-- RK3588 GPIO配置 -->
+        <!-- GPIO编号计算：GPIO编号 = 控制器编号 × 32 + 端口编号 × 8 + 引脚索引 -->
+        <!-- 端口编号：A=0, B=1, C=2, D=3 -->
+        <!-- 示例：GPIO1_D0 = 1×32 + 3×8 + 0 = 56 -->
+        <param name="ir_gpio_input" value="56" />          <!-- 输入GPIO编号（用于读取红外传感器） -->
+        <param name="ir_gpio_output" value="75" />         <!-- 输出GPIO编号（可选，用于控制红外模块，0表示不使用） -->
+        
+        <!-- 发布频率 -->
+        <param name="publish_rate" value="10.0" />         <!-- 数据发布频率（Hz） -->
+    </node>
+</launch>

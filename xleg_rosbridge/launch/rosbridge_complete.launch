@@ -1,0 +1,36 @@
+<!--
+  rosbridge完整启动文件
+  包含rosbridge_websocket和话题管理器节点
+  实现ROS与Web端的高效通信接口
+-->
+<launch>
+  <!-- rosbridge_websocket节点，提供WebSocket接口 -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9090" />
+    <arg name="address" value="0.0.0.0" />
+    <arg name="ssl" value="false" />
+    <arg name="certfile" value="" />
+    <arg name="keyfile" value="" />
+    <arg name="authenticate" value="false" />
+  </include>
+
+  <!-- rosapi节点，提供ROS API服务 -->
+  <node name="rosapi" pkg="rosapi" type="rosapi_node" output="screen"/>
+
+  <!-- rosbridge话题管理器节点（可选） -->
+  <!-- 用于动态管理话题发布 -->
+  <node name="rosbridge_topic_manager" pkg="xleg_rosbridge" type="rosbridge_topic_manager" output="screen">
+    <rosparam>
+      enable_footforce: true
+      enable_jointstate: true
+      enable_bodystate: true
+      enable_cameraimage: false
+      publish_rate: 10
+      max_connections: 10
+    </rosparam>
+  </node>
+
+  <!-- 可选：启动tf2_web_republisher，用于Web端TF变换 -->
+  <!-- <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" output="screen"/> -->
+</launch>
+

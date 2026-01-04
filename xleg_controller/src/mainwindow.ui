@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>929</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>巡游机器人控制系统 - 钱室</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>881</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>2. 关节舵机状态  </string>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>32</y>
+       <width>871</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>195</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>104</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>30</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>力矩状态  </string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>腿1</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿2</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿3</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿4</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_jointState">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>871</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>1000</height>
+      </size>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked</set>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>65</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>52</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>30</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>23</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>在线状态  </string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>角度(°)</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>电流(A)</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>温度(℃)</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>关节1</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节2</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节3</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节4</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节5</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节6</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节7</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节8</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节9</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节10</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节11</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>关节12</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>77</green>
+         <blue>77</blue>
+        </color>
+       </brush>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>77</green>
+         <blue>77</blue>
+        </color>
+       </brush>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>77</green>
+         <blue>77</blue>
+        </color>
+       </brush>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>8</y>
+      <width>441</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>1. 机身状态 </string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_bodyState">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>431</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <row>
+      <property name="text">
+       <string>   角度(° )   </string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Wx</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Wy</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Wz</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>0</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>360</y>
+      <width>881</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>3. 足端状态 </string>
+    </property>
+    <widget class="QTableWidget" name="tableWidget_isLanded">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>30</y>
+       <width>870</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>195</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>104</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>30</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>是否触地-</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>腿1</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿2</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿3</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>腿4</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_footForce">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>94</y>
+       <width>871</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>1000</height>
+      </size>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>65</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>55</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>30</number>
+     </attribute>
+     <attribute name="verticalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>21</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>   力(N)     </string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>位置[mm]</string>
+      </property>
+      <property name="toolTip">
+       <string>腿末端（足端）相对于腿起点的坐标</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="BtnConnectRobot">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>660</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>连接机器人</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget_massCenter">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>640</y>
+      <width>431</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <row>
+     <property name="text">
+      <string> 质心(mm)</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>x</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>y</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>z</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>929</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuyundong">
+    <property name="title">
+     <string>- 功能菜单 -</string>
+    </property>
+    <addaction name="actionControl"/>
+    <addaction name="cameraControl"/>
+    <addaction name="separator"/>
+    <addaction name="testdirectControl"/>
+   </widget>
+   <addaction name="menuyundong"/>
+  </widget>
+  <action name="actionControl">
+   <property name="text">
+    <string>运动控制</string>
+   </property>
+  </action>
+  <action name="testdirectControl">
+   <property name="text">
+    <string>调试</string>
+   </property>
+  </action>
+  <action name="cameraControl">
+   <property name="text">
+    <string>打开相机</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>motionCtrlDlg</class>
+ <widget class="QWidget" name="motionCtrlDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>910</width>
+    <height>653</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>运动控制</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>711</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>3+1步态</string>
+    </attribute>
+    <widget class="QPushButton" name="pushButton_trans_moveOnce">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>70</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>运动一次</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>120</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>4.运动控制 </string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trans_left">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>160</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向左</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trans_backward">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>180</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向后</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trans_right">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>160</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向右</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_trans_stop">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>170</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>120</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>3.运动参数 </string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trans_forward">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>140</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向前</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_trans_move">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>120</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连续运动</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_trans_bodydirection">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>50</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逆时针(左转)为 +&lt;/p&gt;&lt;p&gt;顺时针(右转)为 - &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>50</y>
+       <width>102</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>机身转向(°)：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>100</y>
+       <width>102</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>运动方向：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_trans_movedirection">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>100</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;正前方为0，&lt;/p&gt;&lt;p&gt;逆时针(左)为 +，&lt;/p&gt;&lt;p&gt;顺时针(右)为 - 。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>161</width>
+       <height>182</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_stepH">
+        <property name="text">
+         <string>60</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_stepDis">
+        <property name="text">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_baX">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;每次抬腿前移动重心确保机体稳定，单位mm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>35</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_T">
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_speed"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="LineEdit_trans_baY">
+        <property name="text">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="Label_16">
+        <property name="text">
+         <string>重心调整X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="Label_8">
+        <property name="text">
+         <string>运动周期/s</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="mmSLabel">
+        <property name="text">
+         <string>速度/(mm/s)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>                 Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="Label_6">
+        <property name="text">
+         <string>步长</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string>抬腿高度</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>对角步态</string>
+    </attribute>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>165</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="Label">
+        <property name="text">
+         <string>抬腿高度</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="LineEdit_trot_stepH">
+        <property name="text">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="Label_2">
+        <property name="text">
+         <string>步长</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="LineEdit_trot_stepDis">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="Label_3">
+        <property name="text">
+         <string>占空比</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="LineEdit_trot_b">
+        <property name="text">
+         <string>0.75</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="Label_4">
+        <property name="text">
+         <string>运动周期/s</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="LineEdit_trot_T">
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="mmSLabel_2">
+        <property name="text">
+         <string>速度/(mm/s)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="LineEdit_trot_speed"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>120</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>3.运动参数 </string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trot_forward">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>140</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向前</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trot_left">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>160</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向左</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trot_right">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>160</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向右</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_trot_backward">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>180</y>
+       <width>116</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>向后</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>120</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>4.运动控制 </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_trot_move">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>120</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连续运动</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_trot_stop">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>170</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>50</y>
+       <width>102</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>机身转向(°)：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>100</y>
+       <width>102</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>运动方向：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_trot_bodydirection">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>50</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;逆时针(左转)为 +&lt;/p&gt;&lt;p&gt;顺时针(右转)为 - &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_trot_movedirection">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>100</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;正前方为0，&lt;/p&gt;&lt;p&gt;逆时针(左)为 +，&lt;/p&gt;&lt;p&gt;顺时针(右)为 - 。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>运动演示</string>
+    </attribute>
+    <widget class="QPushButton" name="Btn_show_move">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>130</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按序列运动</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Btn_show_stop">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>180</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>120</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>4.运动序列</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>40</y>
+       <width>192</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_show7">
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_show6">
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="lineEdit_show7">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEdit_show6">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="lineEdit_show5">
+        <property name="text">
+         <string>120</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_show5">
+        <property name="currentText">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>翻越台阶</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="lineEdit_show8">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBox_show8">
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>192</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_show3">
+        <property name="currentText">
+         <string>前进/后退</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>翻越台阶</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_show2">
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>翻越台阶</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="lineEdit_show3">
+        <property name="text">
+         <string>360</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEdit_show2">
+        <property name="text">
+         <string>300</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="lineEdit_show1">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;前进为正，后退为负，单位mm&lt;/p&gt;&lt;p&gt;左移为正，右移为负，单位mm&lt;/p&gt;&lt;p&gt;左转为正，右转为负，单位度（°）&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>120</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_show1">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>翻越台阶</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="lineEdit_show4">
+        <property name="text">
+         <string>-45</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBox_show4">
+        <property name="currentText">
+         <string>左转/右转</string>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>前进/后退</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左移/右移</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>左转/右转</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>翻越台阶</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>152</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_5">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="Label_11">
+        <property name="text">
+         <string>抬腿高度</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="LineEdit_show_stepH">
+        <property name="text">
+         <string>60</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="Label_12">
+        <property name="text">
+         <string>步长</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="LineEdit_show_stepDis">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;前进/后退步长&lt;/p&gt;&lt;p&gt;前进/后退步长最高为150mm;&lt;/p&gt;&lt;p&gt;左移/右移步长最高为100mm。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>120</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="Label_13">
+        <property name="text">
+         <string>重心调整X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="LineEdit_show_baX">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;每次抬腿前移动重心确保机体稳定，单位mm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>40</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="Label_14">
+        <property name="text">
+         <string>周期/s</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="LineEdit_show_T">
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="LineEdit_show_baY">
+        <property name="text">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="yLabel">
+        <property name="text">
+         <string>                 Y</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>120</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>3.运动参数 </string>
+     </property>
+    </widget>
+    <zorder>Btn_show_move</zorder>
+    <zorder>groupBox_7</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>formLayoutWidget_3</zorder>
+    <zorder>groupBox_8</zorder>
+    <zorder>Btn_show_stop</zorder>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>451</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_posFinish">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>机器人结束</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_posReady">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>机器人就绪</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>1.机器人初始化</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="pushButton_clearErr">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>清除错误</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton_torqueOff">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>释放力矩</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_torqueOn">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>加载力矩</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>711</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QFormLayout" name="formLayout_4">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>2.初始姿态定义</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item row="3" column="5">
+       <widget class="QLabel" name="label_Wz">
+        <property name="text">
+         <string>   Wz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit_initFootDisX">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_Wy">
+        <property name="text">
+         <string>Wy</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_footholdDis">
+        <property name="text">
+         <string>足端x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_y">
+        <property name="text">
+         <string>y</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_z">
+        <property name="text">
+         <string>z</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_initX">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;单位mm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLineEdit" name="lineEdit_initWy">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLineEdit" name="lineEdit_initY">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLineEdit" name="lineEdit_initWz">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox_commonPos">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>自定义位置</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>全方位3+1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>快速3+1(X)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>全方位对角</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>快速对角</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="7">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="8">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>方式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QCheckBox" name="checkBox_slowPos">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;只有足端位置改变了，才需要抬腿调整。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>抬腿调整</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="8">
+       <widget class="QCheckBox" name="checkBox_directPos">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;只是调整机身，可选择直接移动方式。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>直接移动</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLineEdit" name="lineEdit_initFootDisY">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>150</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_footholdDis_2">
+        <property name="text">
+         <string>足端y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_Wx">
+        <property name="text">
+         <string>Wx</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_initWx">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;单位度（°）&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_x">
+        <property name="text">
+         <string>x</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLineEdit" name="lineEdit_initZ">
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>120</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QPushButton" name="pushButton_initPos">
+        <property name="text">
+         <string>运动到指定姿态</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_directInitPos">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>680</y>
+     <width>138</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16666</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>DIRECT GO</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_trot_customDirY">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>740</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1</number>
+   </property>
+   <property name="maximum">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_trot_customDirX">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>740</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1</number>
+   </property>
+   <property name="maximum">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_trans_customDirY">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>700</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1</number>
+   </property>
+   <property name="maximum">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_trans_customDirX">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>700</y>
+     <width>60</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1</number>
+   </property>
+   <property name="maximum">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LineEdit_trans_DirZ">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>700</y>
+     <width>62</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label_9">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>700</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>旋转角度/°</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LineEdit_trot_DirZ">
+   <property name="geometry">
+    <rect>
+     <x>131</x>
+     <y>740</y>
+     <width>62</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label_10">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>740</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>旋转角度/°</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_trans_customDir">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>690</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自定义方向(°)：</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_trot_customDir">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>740</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自定义方向(°)：</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>730</y>
+     <width>172</width>
+     <height>62</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>waittime(ms)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_waittime">
+      <property name="text">
+       <string>800</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>playtime(ms)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_playtime">
+      <property name="text">
+       <string>800</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>610</y>
+     <width>341</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QCheckBox" name="checkBox_saveData">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>保存力数据</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="Label_15">
+      <property name="text">
+       <string>文件名</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_filename">
+      <property name="text">
+       <string>60-100-35-20-6-</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>610</y>
+     <width>314</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QCheckBox" name="checkBox_bizhang">
+      <property name="text">
+       <string>视觉传感</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_climb">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;越障模式&lt;/p&gt;&lt;p&gt;针对过渡台阶、斜坡，及不平整地面行走。&lt;/p&gt;&lt;p&gt;该模式下时刻检索足底力，当判断足触地停止下落。&lt;/p&gt;&lt;p&gt;该模式仅适用于3+1步态。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>力觉反馈</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_noGravity">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;考虑重力，即行走过程有重心调整；&lt;/p&gt;&lt;p&gt;不考虑重力，即无重心调整。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>不考虑重力</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="Label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>790</y>
+     <width>60</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>稳定裕度</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LineEdit_trans_k">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>790</y>
+     <width>73</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0.3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_moveforward">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>470</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>直接前进</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,6 @@
+<!--利用launch文件来启动程序时，不需要启动roscore，launch文件会自动检测并启动-->
+
+<launch>
+    <node pkg="xleg_lowersys" type="xleg_lowersys" name="xleg_lowersys_node" output="screen">
+    </node>
+</launch>

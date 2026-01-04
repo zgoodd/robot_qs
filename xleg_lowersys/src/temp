@@ -1,0 +1,53 @@
+ uint16_t playtime = floor(T*1000/7);  //6步，每步时间ms, 循环里采集力信息舵机信息也需要时间
+                    int okback=1;
+                    float a[3],b[3],c[3],d[3];  // 定义a,b,c,d 各条腿末端（足端）相对于腿起点的坐标(x,y,z) mm
+                    //机身退
+                    if (i = 0)
+                    {
+                        g_v[0] = g_v[0] - stepDistance/2;
+
+                        CCenterToLeg(g_v,g_w,g_foot1,g_foot2,g_foot3,g_foot4,a,b,c,d);   //a,b,c,d均为输出参数，
+                        int error_codes=Set_ALL_Leg_Positon(a,b,c,d);
+                        if(error_codes == 0)
+                            Send_ALL_Leg_Positon( playtime );
+                    }
+                    //腿1进
+                    else if (i = floor(ticks/6))
+                    {
+                        okback = Make_One_Leg_Runonce(1, a, stepDistance, stepHeight, playtime);
+                        if (okback == 0)
+                            stopFlag = true;
+                    }
+
+                    //腿2进
+                    else if (i = floor(2*ticks/6))
+                    {
+                        okback = Make_One_Leg_Runonce(2, b, stepDistance, stepHeight, playtime);
+                        if (okback == 0)
+                            stopFlag = true;
+                    }
+                    //机身进
+                    else if (i = floor(3*ticks/6))
+                    {
+                        g_v[0] = g_v[0] + 3*stepDistance/2;
+
+                        CCenterToLeg(g_v,g_w,g_foot1,g_foot2,g_foot3,g_foot4,a,b,c,d);   //a,b,c,d均为输出参数，
+                        int error_codes=Set_ALL_Leg_Positon(a,b,c,d);
+                        if(error_codes == 0)
+                            Send_ALL_Leg_Positon( playtime );
+                    }
+                    //腿3进
+                    else if (i = floor(ticks/6))
+                    {
+                        okback = Make_One_Leg_Runonce(3, c, stepDistance, stepHeight, playtime);
+                        if (okback == 0)
+                            stopFlag = true;
+                    }
+
+                    //腿4进
+                    else if (i = floor(2*ticks/6))
+                    {
+                        okback = Make_One_Leg_Runonce(4, d, stepDistance, stepHeight, playtime);
+                        if (okback == 0)
+                            stopFlag = true;
+                    }

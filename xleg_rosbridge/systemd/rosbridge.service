@@ -1,0 +1,28 @@
+[Unit]
+Description=Kuavo Robot Rosbridge WebSocket Service
+Documentation=https://wiki.ros.org/rosbridge_suite
+After=network.target roscore.service
+Wants=roscore.service
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+Group=YOUR_GROUP
+# 设置工作目录
+WorkingDirectory=/home/YOUR_USERNAME/catkin_ws
+# 设置环境变量
+Environment="ROS_MASTER_URI=http://localhost:11311"
+Environment="ROS_IP=localhost"
+# 启动命令
+ExecStart=/bin/bash -c 'source /opt/ros/melodic/setup.bash && source /home/YOUR_USERNAME/catkin_ws/devel/setup.bash && roslaunch xleg_rosbridge rosbridge.launch'
+# 重启策略
+Restart=always
+RestartSec=10
+# 日志设置
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=rosbridge
+
+[Install]
+WantedBy=multi-user.target
+

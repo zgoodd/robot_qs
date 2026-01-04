@@ -1,0 +1,23 @@
+<!--
+  rosbridge启动文件
+  通过WebSocket接口实现ROS与Web端的高效通信
+  支持Topics和Services的动态访问
+-->
+<launch>
+  <!-- rosbridge_websocket节点，提供WebSocket接口 -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9090" />
+    <arg name="address" value="0.0.0.0" />
+    <arg name="ssl" value="false" />
+    <arg name="certfile" value="" />
+    <arg name="keyfile" value="" />
+    <arg name="authenticate" value="false" />
+  </include>
+
+  <!-- 可选：启动rosapi，提供ROS API服务 -->
+  <node name="rosapi" pkg="rosapi" type="rosapi_node" output="screen"/>
+
+  <!-- 可选：启动tf2_web_republisher，用于Web端TF变换 -->
+  <!-- <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" output="screen"/> -->
+</launch>
+

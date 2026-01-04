@@ -1,0 +1,39 @@
+float32 x
+float32 y
+float32 z
+
+float32 Wx
+float32 Wy
+float32 Wz 
+
+# footholdDistanceX Y 分别定义为足端相对于腿起点的相对X和Y值
+# 因此，初始态下 X=0（未前进） Y=150  Z=-20
+int32 footholdDistanceX
+int32 footholdDistanceY
+
+int32 gaitType
+
+int32 GAIT_USER_DEFINED= 0
+int32 GAIT_TRANS= 1
+int32 GAIT_TRANS_FAST = 2
+int32 GAIT_TROT = 3
+int32 GAIT_TROT_FAST = 4
+
+uint16 playtime   #ms
+uint16 waittime   #ms
+
+int32 initPosMode
+
+int32 DIRECT = 0
+int32 INDIRECT =1
+
+int32 stepHeight
+int32 stepDistance
+
+
+int32 get_robotReady    #1 stand up; 2 sit down; 0 others
+
+#duration timeout
+---
+
+int32 error_codes

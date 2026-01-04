@@ -1,0 +1,33 @@
+version: '3'
+services:
+  ros:
+    image: ros-melodic-auto-build  # 使用的 Docker 镜像
+    container_name: ros-melodic-container  # 容器的名称
+    volumes:
+      # 将本地的 qs_robot 工程文件夹挂载到容器内的指定路径
+      - ./qs_robot:/root/catkin_ws/qs_robot
+    ports:
+      # 将容器内的 11311 端口映射到主机（本地计算机）的 11311 端口
+      - "11311:11311"
+    environment:
+      # 设置 ROS Master 的 URI 地址为本地主机的 11311 端口
+      - ROS_MASTER_URI=http://localhost:11311
+      # 设置 ROS 节点的 IP 地址为本地（localhost）
+      - ROS_IP=localhost
+注释说明：
+
+image: ros-melodic-auto-build: 使用 ros-melodic-auto-build 镜像来创建容器。
+
+container_name: ros-melodic-container: 容器的名称为 ros-melodic-container。
+
+volumes: 用于将本地的 qs_robot 工程目录挂载到容器内的指定路径 /root/catkin_ws/qs_robot。这意味着你本地的文件会与容器中的文件夹保持同步。
+
+ports: - "11311:11311": 这是一个端口映射，将容器内的 11311 端口（默认的 ROS Master 端口）映射到本地主机的同一个端口，使得 ROS 网络通信能够正常工作。
+
+environment: 设置了两个环境变量：
+
+ROS_MASTER_URI=http://localhost:11311：指向 ROS Master 的 URI，确保 ROS 节点可以找到并连接到 Master。
+
+ROS_IP=localhost：设置当前节点的 IP 地址为 localhost，即该节点会尝试与本地主机上的 ROS Master 进行通信。
+
+通过这些配置，容器内的 ROS 系统能够与宿主机和其他 ROS 节点进行正常通信，且本地的工程文件也可以在容器内访问和编辑。

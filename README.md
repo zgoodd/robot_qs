@@ -91,13 +91,13 @@ catkin_make
 
 ### 2.1 主 Dockerfile (ROS Melodic)
 
-见Dockerfile.txt文件
+见Dockerfile
 
 ### 2. 2 Shell 脚本：instll_libraries.sh
 
 这个脚本将会安装第三方库的源码。你可以根据需求修改其中的库和安装方式。
 
-见install_libraries.txt
+见install_libraries.sh
 
 ##  第三部分：构建和运行Docker镜像
 
@@ -111,11 +111,11 @@ docker build -t ros-melodic-auto-build .
 
 使用 Docker 容器和 Docker Compose 可以进一步简化自动化部署的流程。你可以创建一个 `docker-compose.yml` 文件来方便地管理和部署多个容器或服务。
 
-见 `docker-compose.txt
+见 docker-compose.yml
 
 ### 3.3启动容器
 
-见run.sh(txt)
+见run.sh
 
 ##  第四部分：编译运行ROS工程
 
